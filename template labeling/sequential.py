@@ -71,7 +71,7 @@ def update_numbers_in_docx(file_path, output_path, start_value, end_value):
         current_start = current_end + 1
 
 # Example usage
-input_file = 'word template/input.docx'
-output_path = 'word template/output'
+input_file = 'template labeling/input.docx'
+output_path = 'template labeling/output'
 
 update_numbers_in_docx(input_file, output_path, start_value, end_value)

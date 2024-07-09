@@ -9,7 +9,7 @@ from docx.shared import Pt
 from docx.oxml.ns import qn
 
 
-output_path = 'word template/ output/'
+output_path = 'template labeling/ output/'
 
 def add_page_break(paragraph):
     paragraph.add_run().add_break(WD_BREAK.PAGE)
@@ -74,8 +74,8 @@ def update_numbers_in_docx(file_path, output_path, values):
 
         current_start = current_end
 # Example usage
-input_file = 'word template/input.docx'
-output_path = 'word template/ output'
+input_file = 'template labeling/input.docx'
+output_path = 'template labeling/ output'
 values = [
     "AWM SC 12770(1)", "AWM SC 12770(2)", "AWM SC 12771", "AWM SC 12772", "AWM SC 12773", 
     "AWM SC 12774", "AWM SC 12775", "AWM SC 12776", "AWM SC 12777", "AWM SC 12778(1)", 
