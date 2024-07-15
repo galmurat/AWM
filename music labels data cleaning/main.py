@@ -5,7 +5,6 @@
 import pandas as pd
 import re
 
-# Function to extract information using regular expressions
 def extract_info(history_note):
     address = re.search(r"Address: (.*?)(?=, Phone:|, E-mail:|, Fax:|Phone/Fax:|Phone & Fax:|$)", history_note)
     phone = re.search(r"Phone: (.*?)(?=, Fax:|, E-mail:|, Address:|$)", history_note)
@@ -33,26 +32,22 @@ def extract_info(history_note):
         'Email': email.group(1).strip() if email else ''
     }
 
-# Function to clean up the columns
 def clean_up_column(column, patterns):
     if isinstance(column, str):
         for pattern in patterns:
             column = re.sub(pattern, '', column).strip()
     return column
 
-# Load the CSV file
 df = pd.read_csv('music labels data cleaning/yourfile.csv')
 
 df.columns = df.columns.str.strip()
 print("Columns:", df.columns)
 
-# Create new columns for Address, Phone, Fax, and Email
 df['Address'] = ''
 df['Phone'] = ''
 df['Fax'] = ''
 df['Email'] = ''
 
-# Apply the extract_info function to each row in the History Note column
 for idx, row in df.iterrows():
     if pd.notna(row['History Note']):
         info = extract_info(row['History Note'])
@@ -61,20 +56,17 @@ for idx, row in df.iterrows():
         df.at[idx, 'Fax'] = info['Fax']
         df.at[idx, 'Email'] = info['Email']
 
-# Define patterns for cleaning up columns
 patterns_history_note = [r'Address:.*', r'Phone:.*', r'Fax:.*', r'E-mail:.*']
 patterns_address = [r'Phone:.*', r'Fax:.*', r'E-mail:.*', r'Phone/Fax:.*', r'Phone & Fax:.*']
 patterns_phone = [r'Fax:.*', r'E-mail:.*']
 patterns_fax = [r'E-mail:.*']
 
-# Clean up the columns
 df['History Note'] = df['History Note'].apply(lambda x: clean_up_column(x, patterns_history_note))
 df['Address'] = df['Address'].apply(lambda x: clean_up_column(x, patterns_address))
 df['Phone'] = df['Phone'].apply(lambda x: clean_up_column(x, patterns_phone))
 df['Fax'] = df['Fax'].apply(lambda x: clean_up_column(x, patterns_fax))
 df['Email'] = df['Email'].apply(lambda x: clean_up_column(x, [r'E-mail:.*']))
 
-# Save the updated dataframe to a new CSV file
 df.to_csv('music labels data cleaning/updated_file.csv', index=False)
 
 print("Data has been successfully processed and saved to 'updated_file.csv'.")

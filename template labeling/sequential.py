@@ -3,6 +3,7 @@
 # edit the start_value and end_value with the first number you want on the page
 # and the last numebr on the page. 
 
+# input the first and last call numbers you want
 start_value = 16760
 end_value = 16904
 
@@ -75,4 +76,5 @@ input_file = 'template labeling/input.docx'
 output_path = 'template labeling/output/'
 
 update_numbers_in_docx(input_file, output_path, start_value, end_value)
+
 
