@@ -18,8 +18,10 @@ The only things you must do are input a CSV file into the "music labels data cle
 
 # Template Labeling
 There's two parts to this code. You will choose which code to run depending on your case. 
-1. Non-sequential ordering of the call numbers /n
+1. Non-sequential ordering of the call numbers
+
 If the call numbers are not in direct ascending order but have multiple parts (e.g. AWM SC 12(1), AWM SC 12(2), AWM Sc 13) or you want control over which specific numbers will be put in (e.g. AWM SC 4, AWM SC 6, AWM SC 9, AWM SC 13), you will use the non-sequential.py file. To use it, copy over the specific call numbers you want inside the brackets in the "values" variable at the top, seperating them with commas and quotation marks. The output will be in the output folder in the template labeling folder. 
 
-2. Sequential ordering of the call numbers /n
+2. Sequential ordering of the call numbers 
+
 If the call numbers are in direct ascending order (e.g. AWM SC 1, AWM SC 2, AWM SC 3, AWM SC 4), then you wil use the sequential.py file. Simply input the first and last number you want labeled. The output will be in the template labeling folder. 
