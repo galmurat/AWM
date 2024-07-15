@@ -3,8 +3,8 @@
 # edit the start_value and end_value with the first number you want on the page
 # and the last numebr on the page. 
 
-start_value = 12770
-end_value = 13526
+start_value = 16760
+end_value = 16904
 
 from docx import Document
 from docx.enum.text import WD_BREAK
@@ -72,6 +72,7 @@ def update_numbers_in_docx(file_path, output_path, start_value, end_value):
 
 # Example usage
 input_file = 'template labeling/input.docx'
-output_path = 'template labeling/output'
+output_path = 'template labeling/output/'
 
 update_numbers_in_docx(input_file, output_path, start_value, end_value)
+

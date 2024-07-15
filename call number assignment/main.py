@@ -3,7 +3,7 @@ import pandas as pd
 # Load the CSV file
 df = pd.read_csv('call number assignment/data.csv')
 
-# Initialize variables
+# Input the first call number you want to start with. 
 current_call_number = 12769
 previous_part = 0
 
