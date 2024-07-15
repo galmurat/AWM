@@ -1,5 +1,4 @@
 import pandas as pd
-# work?
 df = pd.read_csv('call number assignment/data.csv')
 
 # Input the first call number you want to start with. 
