@@ -1,22 +1,22 @@
 # AWM
 This repository contains code from summer 2024 simplifying certain processes. Each document entails a detailed description of what the code does, how to run it, along with a video showing how to do it. Here's a quick description of what each document does:
 
-# Call number assignment 
+## Call number assignment 
 When input a csv file which has a "Parts" column, outputs assigned call numbers which include the part in parenthesis. For example, it will output AWM SC 10000(1). 
 
 The only things you must do is put in a csv file into the call number assignment folder titled data.csv and change the "current call number" at the very top of the code. The output is the modified_case.csv file. 
 
-# Date formatting 
+## Date formatting 
 When input a csv file which has a "Date" column, outputs only the date (removing irrelevant information) in the format yyyy-mm-dd. 
 
 The only things you must do is put in a csv file into the date formatting folder titled your_file.csv The output is output.csv 
 
-# Music labels data cleaning
+## Music labels data cleaning
 When you input a CSV file which contains a "History Note" column, this code extracts and organizes contact information such as addresses, phone numbers, fax numbers, and email addresses into separate columns. For example, it will move "Phone: 123-456-7890" from the "History Note" column to the new "Phone" column.
 
 The only things you must do are input a CSV file into the "music labels data cleaning" folder titled "yourfile.csv" and run the code. The output is the "updated_file.csv" file.
 
-# Template Labeling
+## Template Labeling
 There's two parts to this code. You will choose which code to run depending on your case. 
 1. Non-sequential ordering of the call numbers
 
